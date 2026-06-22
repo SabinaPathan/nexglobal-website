@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Support — NexGlobal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/logo.jpeg" alt="NexGlobal Logo" height="80"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="support.html">Support</a></li>
+          <li class="nav-item ms-3">
+            <a class="btn btn-orange" href="support.html">Get in Touch</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container text-center" data-aos="fade-up">
+      <h1>Get in <span class="text-orange">Touch</span></h1>
+      <p>We are here to help. Reach out and we will get back to you shortly.</p>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Support</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- CONTACT DETAILS -->
+        <div class="col-lg-5 col-md-12" data-aos="fade-right">
+          <h2 class="mb-4">Let's <span class="text-orange">Connect</span></h2>
+          <p class="text-muted mb-4">Have a shipment in mind? Need a custom logistics solution? Fill in the form and our team will get back to you within 24 hours.</p>
+
+          <div class="contact-info-card">
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h6>Phone</h6>
+                <p>+91 98765 43210</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h6>Email</h6>
+                <p>contact@nexglobal.com</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h6>Address</h6>
+                <p>Bandra Kurla Complex,<br/>Mumbai, Maharashtra 400051</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <h6>Business Hours</h6>
+                <p>Mon – Sat: 9:00 AM – 6:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-icons mt-4">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="col-lg-7 col-md-12" data-aos="fade-left">
+          <div class="contact-form-box">
+            <h4 class="mb-4">Send us a <span class="text-orange">Message</span></h4>
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Full Name *</label>
+                  <input type="text" class="form-control" id="userName" placeholder="XYZ" required/>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email Address *</label>
+                  <input type="email" class="form-control" id="userEmail" placeholder="xyz@company.com" required/>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" id="userPhone" placeholder="+91 98765 43210"/>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Service Required</label>
+                  <select class="form-select" id="userService">
+                    <option value="">Select a Service</option>
+                    <option>Freight Forwarding</option>
+                    <option>Customs Clearance</option>
+                    <option>Warehousing & Distribution</option>
+                    <option>Supply Chain Management</option>
+                    <option>Air & Sea Cargo</option>
+                    <option>Last Mile Delivery</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Message *</label>
+                  <textarea class="form-control" id="userMessage" rows="5" placeholder="Tell us about your logistics requirements..." required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-orange w-100 py-3" id="submitBtn">
+                    <span id="btnText">Send Message</span>
+                    <span id="btnLoader" style="display:none;">Sending...</span>
+                  </button>
+                </div>
+                <div class="col-12">
+                  <div id="successMsg" class="alert alert-success" style="display:none;">
+                    ✅ Thank you! Your message has been sent. We will get back to you within 24 hours.
+                  </div>
+                  <div id="errorMsg" class="alert alert-danger" style="display:none;">
+                    ❌ Something went wrong. Please try again or email us directly.
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section-padding" style="background-color: var(--light-bg);">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <h2>Frequently Asked <span class="text-orange">Questions</span></h2>
+        <p>Quick answers to common logistics queries</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up">
+          <div class="accordion" id="faqAccordion">
+
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  What services does NexGlobal offer?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  NexGlobal offers end-to-end logistics solutions including Freight Forwarding, Customs Clearance, Warehousing & Distribution, Supply Chain Management, Air & Sea Cargo, and Last Mile Delivery.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  How long does international shipping take?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Transit times vary based on origin, destination and mode of transport. Air freight typically takes 2-5 business days while sea freight can range from 15-45 days. We always provide estimated timelines upfront.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Do you provide real-time shipment tracking?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes! We provide real-time GPS tracking and regular status updates for all shipments. You will always know exactly where your cargo is at every stage of its journey.
+                </div>
+              </div>
+            </div>                  
+              
+            
+
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  How do I get a quote for my shipment?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Simply fill in the contact form above with your shipment details and our team will get back to you with a customised quote within 24 hours. You can also reach us directly by phone or email.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                  Is my cargo insured during transit?
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We offer comprehensive cargo insurance options for all shipments. Our team will advise you on the best coverage based on the nature and value of your goods.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <img src="assets/images/logo.jpeg" alt="NexGlobal" height="80" class="mb-3"/>
+          <p>Simplifying international commerce through smart logistics frameworks and trusted partnerships.</p>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Contact</h6>
+          <ul class="footer-links">
+            <li><i class="fas fa-phone me-2 text-orange"></i>+91 98765 43210</li>
+            <li><i class="fas fa-envelope me-2 text-orange"></i>contact@nexglobal.com</li>
+            <li><i class="fas fa-map-marker-alt me-2 text-orange"></i>Mumbai, Maharashtra</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Follow Us</h6>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p>&copy; 2025 NexGlobal. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP BUTTON -->
+  <a href="https://wa.me/919876543210" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
