@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   color: #333333;
@@ -39,7 +43,7 @@ body {
 /* NAVBAR */
 .navbar {
   background-color: var(--navy);
-  padding: 12px 0;
+  padding: 8px 0;
   box-shadow: 0 2px 20px rgba(0,0,0,0.15);
 }
 .navbar .nav-link {
@@ -57,6 +61,19 @@ body {
 }
 .navbar-toggler-icon {
   filter: invert(1);
+}
+
+/* LOGO */
+.navbar-brand {
+  padding: 0;
+}
+.logo-img {
+  height: 120px;
+  width: auto;
+  transition: transform 0.25s ease;
+}
+.logo-img:hover {
+  transform: scale(1.05);
 }
 
 /* HERO */
@@ -312,27 +329,18 @@ body {
 .service-card-full ul li { margin-bottom: 6px; }
 
 /* ABOUT - STORY SECTION */
-.story-image-box {
-  background: linear-gradient(135deg, var(--navy), #2d2d9e);
+.story-image-wrap {
   border-radius: 20px;
-  padding: 80px 40px;
-  text-align: center;
-  color: white;
-  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(26,26,110,0.15);
 }
-.story-image-box i { font-size: 100px; color: var(--orange); opacity: 0.9; }
-.story-badge {
-  position: absolute;
-  bottom: -20px;
-  right: 30px;
-  background: var(--orange);
-  color: white;
-  padding: 16px 24px;
-  border-radius: 12px;
-  text-align: center;
+.story-image {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  object-fit: cover;
+  display: block;
 }
-.story-badge h3 { font-weight: 800; margin: 0; font-size: 28px; }
-.story-badge p { margin: 0; font-size: 12px; font-weight: 500; }
 .story-text { color: #555; line-height: 1.8; margin-bottom: 16px; }
 .mini-stat { text-align: center; padding: 20px; background: var(--light-bg); border-radius: 12px; }
 .mini-stat h4 { color: var(--navy); font-weight: 800; font-size: 28px; margin: 0; }
@@ -399,7 +407,183 @@ body {
 .why-ng-card h5 { color: var(--navy); font-weight: 700; margin-bottom: 10px; }
 .why-ng-card p { color: #666; font-size: 14px; }
 
-/* CONTACT INFO - SUPPORT */
+/* NETWORK / PARTNERS PAGE */
+.network-intro {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.network-intro-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--navy), #2d2d9e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+.network-intro-icon i { font-size: 26px; color: var(--orange); }
+
+.network-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 40px;
+}
+.network-stat-box {
+  background: white;
+  border-radius: 14px;
+  padding: 28px 36px;
+  text-align: center;
+  flex: 0 1 200px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  border-top: 4px solid var(--orange);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.network-stat-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(26,26,110,0.15);
+}
+.network-stat-box h3 {
+  color: var(--navy);
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+.network-stat-box p {
+  color: #666;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.partner-group-label {
+  display: inline-block;
+  background: var(--light-bg);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 32px;
+}
+.partner-subgroup-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  border-radius: 30px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  margin-bottom: 28px;
+}
+.partner-subgroup-label i { color: var(--orange); font-size: 14px; }
+
+.partner-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+.partner-logo-card {
+  flex: 0 1 190px;
+  background: white;
+  border-radius: 14px;
+  padding: 32px 20px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+.partner-logo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(26,26,110,0.15);
+  border-bottom-color: var(--orange);
+}
+.partner-icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  font-size: 20px;
+  color: white;
+  flex-shrink: 0;
+}
+.partner-icon-navy { background: linear-gradient(135deg, var(--navy), #2d2d9e); }
+.partner-icon-orange { background: linear-gradient(135deg, #c9611e, var(--orange)); }
+.partner-name {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--navy);
+  text-align: center;
+  letter-spacing: 0.2px;
+  line-height: 1.3;
+}
+
+.network-banner {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--navy);
+  padding: 64px 0;
+  text-align: center;
+  color: white;
+}
+.network-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -8%;
+  width: 240px;
+  background-color: var(--orange);
+  transform: skewX(-12deg);
+}
+.network-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -6%;
+  width: 140px;
+  background-color: rgba(232,114,42,0.15);
+  transform: skewX(-12deg);
+}
+.network-banner i {
+  position: relative;
+  z-index: 2;
+  font-size: 26px;
+  color: var(--orange);
+  margin-bottom: 14px;
+  display: block;
+}
+.network-banner p {
+  position: relative;
+  z-index: 2;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 500;
+  color: white;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
 .contact-info-card { background: var(--light-bg); border-radius: 16px; padding: 32px; }
 .contact-info-item {
   display: flex;
@@ -487,7 +671,7 @@ body {
 
   /* NAVBAR MOBILE FIX */
   .navbar { padding: 8px 0; }
-  .navbar-brand img { height: 55px !important; }
+  .logo-img { height: 68px; }
   .navbar-toggler {
     display: flex !important;
     align-items: center;
@@ -509,7 +693,7 @@ body {
 
 /* IPAD FIX */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .navbar-brand img { height: 55px !important; }
+  .logo-img { height: 75px; }
   .hero-title { font-size: 36px; }
   .hero-subtitle { font-size: 15px; }
   .navbar-collapse {
