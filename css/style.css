@@ -43,7 +43,7 @@ body {
 /* NAVBAR */
 .navbar {
   background-color: var(--navy);
-  padding: 0;
+  padding: 8px 0;
   box-shadow: 0 2px 20px rgba(0,0,0,0.15);
 }
 .navbar .nav-link {
@@ -66,19 +66,14 @@ body {
 /* LOGO */
 .navbar-brand {
   padding: 0;
-  margin: 0;
 }
 .logo-img {
-  height: 80px;
+  height: 120px;
   width: auto;
   transition: transform 0.25s ease;
-  background: white;
-  padding: 6px 14px;
-  border-radius: 0 0 14px 14px;
-  display: block;
 }
 .logo-img:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 /* HERO */
@@ -87,7 +82,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 80px;
 }
 .hero-tagline {
   color: var(--orange);
@@ -171,9 +166,7 @@ body {
   font-weight: 700;
   margin-bottom: 12px;
 }
-.service-card p { color: #666; font-size: 14px; margin-bottom: 16px; }
-
-/* READ MORE BUTTON */
+.service-card p { color: #666; font-size: 14px; }
 .read-more {
   color: var(--orange);
   font-weight: 600;
@@ -181,15 +174,8 @@ body {
   text-decoration: none;
   margin-top: 12px;
   display: inline-block;
-  padding: 8px 22px;
-  border: 2px solid var(--orange);
-  border-radius: 6px;
-  transition: all 0.3s ease;
 }
-.read-more:hover {
-  background: var(--orange);
-  color: white;
-}
+.read-more:hover { color: #c9611e; }
 
 /* WHY SECTION - HOME */
 .why-section { background-color: var(--light-bg); }
@@ -598,8 +584,6 @@ body {
   margin: 0;
   letter-spacing: 0.5px;
 }
-
-/* CONTACT INFO - SUPPORT */
 .contact-info-card { background: var(--light-bg); border-radius: 16px; padding: 32px; }
 .contact-info-item {
   display: flex;
@@ -683,10 +667,11 @@ body {
   .page-hero p { font-size: 15px; }
   .mv-card { padding: 32px 24px; }
   .contact-form-box { padding: 32px 20px; }
+  .story-badge { right: 10px; }
 
   /* NAVBAR MOBILE FIX */
-  .navbar { padding: 0; }
-  .logo-img { height: 60px; padding: 4px 10px; }
+  .navbar { padding: 8px 0; }
+  .logo-img { height: 68px; }
   .navbar-toggler {
     display: flex !important;
     align-items: center;
@@ -708,7 +693,7 @@ body {
 
 /* IPAD FIX */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .logo-img { height: 70px; }
+  .logo-img { height: 75px; }
   .hero-title { font-size: 36px; }
   .hero-subtitle { font-size: 15px; }
   .navbar-collapse {
@@ -733,6 +718,6 @@ html, body {
 .navbar-collapse.show {
   background-color: var(--navy);
   padding: 16px 20px;
-  margin-top: 0;
+  margin-top: 8px;
   border-radius: 0 0 12px 12px;
 }
